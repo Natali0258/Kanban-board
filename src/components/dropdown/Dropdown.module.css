@@ -1,0 +1,42 @@
+.select {
+   height: 35px;
+   margin-bottom: 3px;
+   background: #ffffff;
+   border: 1px solid #ffffff;
+   border-radius: 5px;
+   /*pointer-events: none;*/
+   display: flex;
+   justify-content: space-between;
+}
+.wrapperSelect {
+   margin: 7px 12px 3px;
+   border-radius: 5px;
+}
+.taskName {
+   height: 35px;
+   padding: 7px 9px 7px 8px;
+   background: #ffffff;
+   border: 1px solid #ffffff;
+   border-radius: 5px;
+   /*pointer-events: none;*/
+}
+.wrapper {
+   position: absolute;
+   padding: 0;
+   background: #ffffff;
+   border: 1px solid #ffffff;
+   border-radius: 5px;
+}
+.taskName:hover {
+   background: #dedede;
+   cursor: pointer;
+}
+.divSelect {
+   height: 13px;
+   background: #ffffff;
+}
+.arrowSelect {
+   padding: 12px 9px 10px 8px;
+   width: 18px;
+   height: 13px;
+}

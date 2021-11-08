@@ -1,0 +1,16 @@
+.main {
+   position: relative;
+   z-index: 1;
+   background: #0079bf;
+   flex-grow: 1;
+}
+.wrapper {
+   position: relative;
+   z-index: 2;
+   display: inline-flex;
+   justify-content: center;
+   width: 1235px;
+   margin: 0;
+   padding: 0;
+   background: #0079bf;
+}

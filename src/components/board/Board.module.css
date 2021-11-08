@@ -1,0 +1,11 @@
+.board {
+   top: 0;
+   padding-left: 7px;
+   padding-right: 4px;
+   background: #0079bf;
+   display: flex;
+   flex-wrap: wrap;
+   flex: 1 1 auto;
+   align-items: baseline;
+   height: calc(100vh - 110px);
+}
