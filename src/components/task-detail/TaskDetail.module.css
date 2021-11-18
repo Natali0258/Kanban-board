@@ -1,5 +1,5 @@
 .taskDetail {
-   width: calc(100vw - 52px);
+   width: calc(100vw - 108px);
    margin: 22px 26px;
    padding-left: 30px;
    background: #ffffff;
@@ -47,4 +47,15 @@
    font-size: 18px;
    line-height: 21px;
    color: #000000;
+}
+.back {
+   margin: 22px 0 0;
+   color: #000000;
+   text-decoration: none;
+   font-size: 18px;
+   border: 1px solid #ffffff;
+}
+.back:hover {
+   cursor: pointer;
+   color: #1f1f1fb2;
 }

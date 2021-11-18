@@ -11,18 +11,23 @@
 .wrapperSelect {
    margin: 7px 12px 3px;
    border-radius: 5px;
+   position: relative;
 }
 .taskName {
-   height: 35px;
+   white-space: pre-wrap;
+   min-height: 35px;
+   max-width: 240px;
+   font-size: 18px;
+   line-height: 21px;
    padding: 7px 9px 7px 8px;
    background: #ffffff;
    border: 1px solid #ffffff;
    border-radius: 5px;
-   /*pointer-events: none;*/
 }
 .wrapper {
    position: absolute;
    padding: 0;
+   width: 258px;
    background: #ffffff;
    border: 1px solid #ffffff;
    border-radius: 5px;

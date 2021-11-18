@@ -11,10 +11,6 @@ const TaskDetail = (props) => {
 
    const task = tasks.find(task => task.id === taskId)
 
-   const handleClick = () => {
-      console.log('cross')
-   }
-
    return (
       <div className={css.taskDetail}>
          {task ?
@@ -22,7 +18,7 @@ const TaskDetail = (props) => {
                <div className={css.taskHeader}>
                   <h2 className={css.taskName}>{task.name}</h2>
                   <Link to='/'>
-                     <div className={css.cross} onClick={handleClick}>
+                     <div className={css.cross}>
                         <img className={css.line1} src={line1} alt='' />
                         <img className={css.line2} src={line2} alt='' />
                      </div>
@@ -30,7 +26,10 @@ const TaskDetail = (props) => {
                </div>
                <p className={css.taskDescriptions}>{task.descriptions || 'This task has no description'}</p>
             </>) :
-            (<h2 className={css.taskName}>Task with this Id={taskId} does not exist</h2>)
+            (<>
+               <Link to='/' className={css.back}>&#8592; Back</Link>
+               <h2 className={css.taskName}>Task with this Id={taskId} does not exist</h2>
+            </>)
          }
       </div>
    )

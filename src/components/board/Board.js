@@ -12,7 +12,7 @@ const Board = (props) => {
       //создание новой задачи
       const newTask = {
          status: LIST_TYPE.BACKLOG,
-         id: Date.now(),
+         id: String(Date.now()),
          name: name,
          descriptions: descriptions,
          created: new Date().toISOString()
@@ -20,14 +20,13 @@ const Board = (props) => {
       //обновим state: создадим новый массив, поместим в него задачи из старого массива
       // и добавим в него новую задачу
       setTasks([...tasks, newTask])
-      console.log('!!!', newTask.name)
    }
 
    return (
       <div className={css.board}>
          {Object.values(LIST_TYPE).map(type => {
             const filterTasks = tasks.filter(task => task.status === type)
-            return <List key={type} tasks={filterTasks} title={LIST_TITLE[type]} addNewTask={addNewTask} type={type} />
+            return <List key={type} tasks={tasks} setTasks={setTasks} filterTasks={filterTasks} title={LIST_TITLE[type]} addNewTask={addNewTask} type={type} />
          })
          }
       </div>

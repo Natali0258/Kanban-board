@@ -33,5 +33,12 @@
       "name": "Child element",
       "descriptions": "Child element - a child of an element that is located one level lower in the document tree.",
       "created": "2021-10-09"
+   },
+   {
+      "status": "ready",
+      "id": "6",
+      "name": "HTML structure",
+      "descriptions": "Main elements: <html>, <head>, <body>, <meta>, <title>, <h1-h6>, <p>.",
+      "created": "2021-10-09"
    }
 ]

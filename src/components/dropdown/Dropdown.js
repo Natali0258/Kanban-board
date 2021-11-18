@@ -1,31 +1,76 @@
 import React from 'react';
 import { useState } from 'react';
-import css from './Dropdown.module.css';
 import { LIST_TYPE } from '../../config';
+import css from './Dropdown.module.css';
 import arrowSelect from '../../images/arrowSelect.svg'
 
 const Dropdown = (props) => {
-   const { tasks, title, type } = props
+   const { tasks, setTasks, title, isButtonSubmit, setButtonSubmit } = props
    const [isDropdownOpen, setDropdownOpen] = useState(false)
 
    const handleSelectClick = () => {
+      if (!isDropdownOpen) {
+         setDropdownOpen(!isDropdownOpen)
+      } else {
+         setButtonSubmit(!isButtonSubmit)
+         setDropdownOpen(!isDropdownOpen)
+      }
+   }
+
+   const handleOptionClick = (e) => {
+      //определим index задачи из массива dropdownTask, по которой был клик
+      const clickTaskIndex = dropdownTask.findIndex(task => e.target.value === task.name)
+
+      //массив с измененной задачей
+      const modifiedTasks = tasks.map(task => {
+         if (task.id === dropdownTask[clickTaskIndex].id) {
+            let upTitle;
+            if (title === 'In Progress') {
+               return {
+                  ...task, status: LIST_TYPE.IN_PROGRESS
+               }
+            }
+            upTitle = title
+            console.log('upTitle=', upTitle)
+            return { ...task, status: LIST_TYPE[upTitle.toUpperCase()] }
+         }
+         return task
+      })
+      setTasks(modifiedTasks)
       setDropdownOpen(!isDropdownOpen)
+      setButtonSubmit(!isButtonSubmit)
    }
 
-   const handleOptionClick = () => {
-      console.log('sss')
+   let dropdownTask;
+   switch (title) {
+      case 'Ready':
+         dropdownTask = tasks.filter(task => task.status === 'backlog');
+         console.log(dropdownTask)
+         break;
+      case 'In Progress':
+         dropdownTask = tasks.filter(task => task.status === 'ready');
+         break;
+      case 'Finished':
+         dropdownTask = tasks.filter(task => task.status === 'in Progress');
+         break;
+      default:
+         console.log('by');
    }
-
    return (
       <div className={css.wrapperSelect}>
-         <seleсt className={css.select} value={''}>
-            <div className={css.divSelect}></div>
-            <img className={css.arrowSelect} src={arrowSelect} alt='' onClick={handleSelectClick} />
-         </seleсt>
+         {isButtonSubmit &&
+            (<seleсt className={css.select} value={''}>
+               <div className={css.divSelect}></div>
+               <img className={css.arrowSelect} src={arrowSelect} alt='' onClick={handleSelectClick} />
+            </seleсt>)
+         }
          {isDropdownOpen &&
             (<div className={css.wrapper}>
-               <option className={css.taskName} onClick={handleOptionClick}>{'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'}</option>
-               <option className={css.taskName}>{'bbb'}</option>
+               {dropdownTask.map(task => {
+                  return (
+                     <option key={task.id} value={task.name} className={css.taskName} onClick={handleOptionClick}>{task.name}</option>
+                  )
+               })}
             </div>)
          }
       </div >

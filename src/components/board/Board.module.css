@@ -3,9 +3,16 @@
    padding-left: 7px;
    padding-right: 4px;
    background: #0079bf;
+   /*flex: 1 0 auto;*/
    display: flex;
+   justify-content: center;
    flex-wrap: wrap;
-   flex: 1 1 auto;
    align-items: baseline;
    height: calc(100vh - 110px);
+   overflow: auto; /*При переполнении контента появляется полоса прокрутки.*/
+}
+@media screen and (max-width: 450px) {
+   .board {
+      height: 100vh;
+   }
 }
