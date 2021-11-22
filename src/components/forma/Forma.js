@@ -3,7 +3,7 @@ import { useState } from 'react';
 import css from './Forma.module.css';
 
 const Forma = (props) => {
-   const { addNewTask, isButtonSubmit, setButtonSubmit, isFormOpen, setFormOpen, handleSubmitClick, formaEl } = props
+   const { addNewTask, isButtonSubmit, setButtonSubmit, isFormOpen, setFormOpen, ref } = props
    const [values, setValues] = useState({
       name: '',
       descriptions: ''
@@ -44,7 +44,7 @@ const Forma = (props) => {
 
    return (
       <>
-         <form className={css.form} id='btn' ref={formaEl} handleSubmitClick={handleSubmitClick} onSubmit={handleFormSubmit}>
+         <form className={css.form} id='btn' ref={ref} onSubmit={handleFormSubmit}>
             <input className={css.name}
                id='taskName'
                type='text'

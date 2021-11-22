@@ -11,19 +11,13 @@ const List = (props) => {
    const { tasks, setTasks, filterTasks, addNewTask, title, type } = props
    const [isButtonSubmit, setButtonSubmit] = useState(false)
    const [isFormOpen, setFormOpen] = useState(false)
-   const formaEl = useRef(null)
+   const ref = useRef(null)
    const [isDropdownOpen, setDropdownOpen] = useState(false)
 
    const handleAddClick = () => {
       setButtonSubmit(!isButtonSubmit)
       setFormOpen(!isFormOpen)
       setDropdownOpen(true)
-   }
-
-   const handleSubmitClick = (e) => {
-      if (formaEl) {
-         formaEl.current.click(e)
-      }
    }
 
    return (
@@ -37,7 +31,7 @@ const List = (props) => {
          })}
 
          {isFormOpen && (type === LIST_TYPE.BACKLOG) && (
-            <Forma addNewTask={addNewTask} handleSubmitClick={handleSubmitClick} isFormOpen={isFormOpen} setFormOpen={setFormOpen} isButtonSubmit={isButtonSubmit} setButtonSubmit={setButtonSubmit} formaEl={formaEl} />
+            <Forma addNewTask={addNewTask} isFormOpen={isFormOpen} setFormOpen={setFormOpen} isButtonSubmit={isButtonSubmit} setButtonSubmit={setButtonSubmit} ref={ref} />
          )}
 
          {isDropdownOpen && (type !== LIST_TYPE.BACKLOG) && (
@@ -48,10 +42,12 @@ const List = (props) => {
             (< button className={css.submit}
                type='submit'
                form='btn'
-               onClick={handleSubmitClick}>
+               ref={ref}>
                Submit
-            </button >)}
-         {!isButtonSubmit &&
+            </button >)
+         }
+         {
+            !isButtonSubmit &&
             (<button className={css.button} type='button' onClick={handleAddClick}>
                <img className={css.plus} src={plus} alt='' />Add card</button>)
          }
