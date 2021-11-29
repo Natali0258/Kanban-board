@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
     window.localStorage.setItem('tasks', JSON.stringify(tasks))
-    console.log('localStorage=', tasks)
+    //console.log('localStorage=', tasks)
   }, [tasks]) //callback запускается только когда изменяться данные в массиве [tasks]
 
   return (

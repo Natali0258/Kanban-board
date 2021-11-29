@@ -59,3 +59,23 @@
    cursor: pointer;
    color: #1f1f1fb2;
 }
+.button {
+   padding: 0;
+   font-size: 18px;
+   line-height: 21px;
+   width: 80px;
+   height: 29px;
+   margin-left: 0;
+   margin-top: 25px;
+   border-radius: 5px;
+   background: #0079bf;
+   border: 1px solid #0079bf;
+   text-align: center;
+   color: #ffffff;
+}
+.button:hover {
+   color: #ffffff;
+   background: #5e6c84;
+   border: 1px solid #5e6c84;
+   cursor: pointer;
+}

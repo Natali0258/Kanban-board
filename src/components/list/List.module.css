@@ -1,9 +1,9 @@
 .list {
-   flex: 1 0 auto;
+   /*flex: 1 0 auto;*/
    display: flex;
    flex-direction: column;
    margin: 20px 11px;
-   max-width: 278px;
+   width: 278px;
    height: auto;
    background: #ebecf0;
    border-radius: 10px;
@@ -36,7 +36,8 @@
 
 /*button ---------------------------------------------------------*/
 .button,
-.submit {
+.submit,
+.buttonDisabled {
    padding: 0;
    font-size: 18px;
    line-height: 21px;
@@ -77,4 +78,9 @@
 }
 .taskLink {
    text-decoration: none;
+}
+.buttonDisabled {
+   color: #5e6c84;
+   background: #dbdada;
+   border: 1px solid #ffffff;
 }

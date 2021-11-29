@@ -13,7 +13,7 @@ const Footer = (props) => {
                <h1 className={css.activeTasks}>Active tasks: {taskBacklog.length}</h1>
                <h1 className={css.finishedTasks}>Finished tasks: {taskFinished.length}</h1>
             </div>
-            <h1 className={css.info}>Kanban board by Tribendis N.B. 2021</h1>
+            <h1 className={css.info}>Kanban board by Tribendis N.V. 2021</h1>
          </div>
       </footer>
 

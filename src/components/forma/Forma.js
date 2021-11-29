@@ -18,7 +18,6 @@ const Forma = (props) => {
       setFormValid(true)
       const fieldName = e.target.name  //свойство name соответствующего элемента (inpt, textarea)
       setValues({ ...values, [fieldName]: e.target.value }) //в поле, которое меняет пользователь записали значение, которое меняет пользователь
-      console.log(e.target.keyCode)
    }
 
 

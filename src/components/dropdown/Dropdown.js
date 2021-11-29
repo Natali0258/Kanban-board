@@ -5,7 +5,7 @@ import css from './Dropdown.module.css';
 import arrowSelect from '../../images/arrowSelect.svg'
 
 const Dropdown = (props) => {
-   const { tasks, setTasks, title, isButtonSubmit, setButtonSubmit } = props
+   const { tasks, setTasks, title, isButtonSubmit, setButtonSubmit, dropdownTask } = props
    const [isDropdownOpen, setDropdownOpen] = useState(false)
 
    const handleSelectClick = () => {
@@ -41,21 +41,7 @@ const Dropdown = (props) => {
       setButtonSubmit(!isButtonSubmit)
    }
 
-   let dropdownTask;
-   switch (title) {
-      case 'Ready':
-         dropdownTask = tasks.filter(task => task.status === 'backlog');
-         console.log(dropdownTask)
-         break;
-      case 'In Progress':
-         dropdownTask = tasks.filter(task => task.status === 'ready');
-         break;
-      case 'Finished':
-         dropdownTask = tasks.filter(task => task.status === 'in Progress');
-         break;
-      default:
-         console.log('by');
-   }
+
    return (
       <div className={css.wrapperSelect}>
          {isButtonSubmit &&
