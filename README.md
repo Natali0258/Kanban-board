@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-![Kanban board kollash](https://user-images.githubusercontent.com/83341999/185552805-f5c08807-6a40-43b5-8644-22912b132a20.png)
+![Kanban board collage](https://user-images.githubusercontent.com/83341999/185553653-649166f6-ce07-469f-a8b0-ed0049a5461d.png)
 
 The Canban-board project is a tool for visualizing and breaking down any task into stages. The project implements the following functionality: adding a new task, moving tasks between lists, saving changes to localStorage, switching to the detailed task page.
 
