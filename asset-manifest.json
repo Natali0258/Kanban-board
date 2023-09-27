@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/Kanban-board/static/css/main.745aa03b.chunk.css",
+    "main.js": "/Kanban-board/static/js/main.c2e7ae5b.chunk.js",
+    "main.js.map": "/Kanban-board/static/js/main.c2e7ae5b.chunk.js.map",
+    "runtime-main.js": "/Kanban-board/static/js/runtime-main.0f49f954.js",
+    "runtime-main.js.map": "/Kanban-board/static/js/runtime-main.0f49f954.js.map",
+    "static/js/2.f6a2ac05.chunk.js": "/Kanban-board/static/js/2.f6a2ac05.chunk.js",
+    "static/js/2.f6a2ac05.chunk.js.map": "/Kanban-board/static/js/2.f6a2ac05.chunk.js.map",
+    "index.html": "/Kanban-board/index.html",
+    "static/css/main.745aa03b.chunk.css.map": "/Kanban-board/static/css/main.745aa03b.chunk.css.map",
+    "static/js/2.f6a2ac05.chunk.js.LICENSE.txt": "/Kanban-board/static/js/2.f6a2ac05.chunk.js.LICENSE.txt",
+    "static/media/arrow.74824462.svg": "/Kanban-board/static/media/arrow.74824462.svg",
+    "static/media/arrowSelect.4843ed17.svg": "/Kanban-board/static/media/arrowSelect.4843ed17.svg",
+    "static/media/arrow_up.4bd38d8c.svg": "/Kanban-board/static/media/arrow_up.4bd38d8c.svg",
+    "static/media/avatar.f7d3d63a.svg": "/Kanban-board/static/media/avatar.f7d3d63a.svg",
+    "static/media/ellipse.4021e6e5.svg": "/Kanban-board/static/media/ellipse.4021e6e5.svg",
+    "static/media/line1.e7b4bf1e.svg": "/Kanban-board/static/media/line1.e7b4bf1e.svg",
+    "static/media/line2.21404a5c.svg": "/Kanban-board/static/media/line2.21404a5c.svg",
+    "static/media/plus.a0856840.svg": "/Kanban-board/static/media/plus.a0856840.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0f49f954.js",
+    "static/js/2.f6a2ac05.chunk.js",
+    "static/css/main.745aa03b.chunk.css",
+    "static/js/main.c2e7ae5b.chunk.js"
+  ]
+}
