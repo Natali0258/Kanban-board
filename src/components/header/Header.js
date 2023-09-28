@@ -28,7 +28,7 @@ const Header = () => {
                {isDropDownMenu && (
                   <>
                      <img className={css.arrow} onClick={handleClick} src={arrow_up} alt='' />
-                     <DropDownMenu />
+                     <DropDownMenu isDropDownMenu={isDropDownMenu} setDropDownMenu={setDropDownMenu} />
                   </>)}
             </div>
          </div>

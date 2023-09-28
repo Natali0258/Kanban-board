@@ -1,5 +1,4 @@
 import React from 'react';
-//import uniqid from 'uniqid'; //эта библиотека создает уникальные id
 import css from './Board.module.css';
 import { LIST_TYPE, LIST_TITLE } from '../../config.js';
 import List from '../list/List';

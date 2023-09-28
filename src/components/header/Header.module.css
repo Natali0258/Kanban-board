@@ -51,6 +51,7 @@
    width: 14px;
    color: #ffffff;
    background: transparent;
+   cursor: pointer;
 }
 @media screen and (max-width: 450px) {
    .title {

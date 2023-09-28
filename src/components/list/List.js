@@ -14,7 +14,6 @@ const List = (props) => {
    const ref = useRef(null)
    const [isDropdownOpen, setDropdownOpen] = useState(false)
    const [isDisabled, setDisabled] = useState(false)
-   // const [isDisable, setDisable] = useEffect(false)
 
    const handleAddClick = () => {
       setButtonSubmit(!isButtonSubmit)

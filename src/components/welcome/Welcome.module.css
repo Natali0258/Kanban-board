@@ -1,0 +1,25 @@
+.welcome {
+   top: 0;
+   padding-left: 7px;
+   padding-right: 4px;
+   background: #0079bf;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   align-items: center;
+   height: calc(100vh - 110px);
+   overflow: auto; /*При переполнении контента появляется полоса прокрутки.*/
+}
+.title{
+   color: white;
+   margin-left: 30px;
+   font-size: 30px;
+}
+.first{
+   font-size: 35px;
+}
+@media screen and (max-width: 450px) {
+   .welcome {
+      height: 100vh;
+   }
+}

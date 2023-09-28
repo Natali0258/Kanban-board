@@ -26,9 +26,13 @@
    font-size: 14px;
    line-height: 16px;
    color: #000000;
+   list-style: none;
 }
 .link:hover {
    background: #b1afaf;
    color: #ffffff;
    cursor: pointer;
+}
+a:link {
+   text-decoration: none;
 }
